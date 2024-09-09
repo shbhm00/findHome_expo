@@ -1,51 +1,71 @@
-# Welcome to your Expo app 👋
+🏠 Real Estate Home Unlocker
+This React Native application allows real estate companies to remotely unlock homes for potential buyers to view. It showcases state management, API integration, and the use of native device features like location services.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+📱 Features
+User Authentication: Simple login to authenticate users.
+Home List: Displays a list of homes fetched from a mock API, each showing basic information like address, image, and description.
+Home Details: Detailed view of a selected home, with an "Unlock" button based on user proximity (within 30m).
+Unlock Functionality: Simulates unlocking a home based on location. Displays a success or error message after the API call.
+🛠 Task Requirements
+Basic UI/UX
+The app focuses on functionality with a simple and clean user interface.
 
-## Get started
+Mock API
+The app uses local JSON files for:
 
-1. Install dependencies
+Fetching the list of homes.
+Simulating the API call for unlocking a home.
+Home List Screen
+Users see a list of homes after logging in, with:
 
-   ```bash
-   npm install
-   ```
+Address
+Image
+Short description
+Home Details Screen
+When a user selects a home, they navigate to a details screen with:
 
-2. Start the app
+Detailed home information.
+An "Unlock" button (visible only when the user is within 30m of the home).
+Upon pressing "Unlock", an API call is simulated, showing either a success or error message.
+🚀 Installation & Setup
+Clone the repository:
 
-   ```bash
-    npx expo start
-   ```
+git clone https://github.com/shbhm00/findHome_expo.git
+cd findHome
+Install dependencies:
 
-In the output, you'll find options to open the app in a
+npm install
+Expo specific commands:-
+"start": "expo start", --> Start the metro
+"android": "expo run:android", --> To create debug build for android
+"ios": "expo run:ios", --> To create debug build for ios
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+npx react-native run-android   # For Android
+npx react-native run-ios       # For iOS
+Ensure your device has location services enabled to test the unlock feature.
 
-## Get a fresh project
+🔗 Mock API Setup
+The app uses local JSON files stored in the mock/ folder for API responses. These include:
 
-When you're ready, run:
+homes.json: Contains the list of homes with their details.
+Unlock API responses are handled directly in the button logic.
+🗂 Folder Structure
+.
+├── app                   # Contain layout of expo as well as pages (Home & Detail)
+├── src                   # Main source code
+│   ├── assets            # Fonts and images
+│   ├── components        # Reusable UI components
+│   ├── constants         # Colors
+│   ├── mockdata          # API mock json
+│   └── mixins            # responsive dimensions for height, width and fonts.
+└── app/_layout.tsx       # Entry point of the app
 
-```bash
-npm run reset-project
-```
+🌟 Key Technologies
+React Native Expo
+Expo Location API
+Expo Router
+Mock JSON data for API simulation
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# findHome_expo
+📝 License
+This project is licensed under the MIT License.
