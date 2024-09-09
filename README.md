@@ -2,6 +2,8 @@
 
 This React Native application allows real estate companies to remotely unlock homes for potential buyers to view. It showcases state management, API integration, and the use of native device features like location services.
 
+* **Note:-**I have added console log("User current location") to get the user coords and update mock data latitude and longitude of any index to test the lock and unlock feature.
+
 ** Features**
 
 * **User Authentication:** Simple login to authenticate users.
